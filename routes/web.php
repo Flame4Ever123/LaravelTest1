@@ -13,7 +13,7 @@ use App\Http\Controllers\TodoListController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// 1st is the url name, 2nd is the function name, 3rd is the name of the route
 Route::get('/', [TodoListController::class, 'index']);
 Route::post('/markCompleteRoute/{id}', [TodoListController::class, 'markComplete'])->name('markComplete');
 Route::post('/saveItemRoute', [TodoListController::class, 'saveItem'])->name('saveItem');

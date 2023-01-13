@@ -22,8 +22,10 @@
     </head>
     <body class="antialiased">
         <div>
+        <!-- for loop to loop thru the database items-->
             @foreach ($listItems as $listItem)
             <p>Item: {{$listItem->name}}</p>
+                    <!-- when submitted thru button, pass the current loop item's id to markComplete route -->
             <form method="post" action="{{ route('markComplete', $listItem->id) }}" accept-charset="UTF-8">
                 {{ csrf_field() }}
                 <button type="submit">Mark Complete</button>

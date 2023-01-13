@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        // This is where the schema is declared for database.
         Schema::create('list_items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
